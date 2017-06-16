@@ -2,7 +2,7 @@
 type item = private Ojs.t
 
 val create_item : uri:string ->
-                  type:string ->
+                  my_type:string ->
                   extension:string ->
                   item
 [@@js.builder]
@@ -12,7 +12,7 @@ type intent = private Ojs.t
 val create_intent :   action:string ->
                       clipItems:Item vect ->
                       flags:string ->
-                      type:string ->
+                      my_type:string ->
                       component:string ->
                       extras:int ->
                       intent
