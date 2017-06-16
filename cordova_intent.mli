@@ -1,21 +1,21 @@
 (*TODO*)
-type Item = private Ojs.t
+type item = private Ojs.t
 
-val create_Item : uri:string ->
+val create_item : uri:string ->
                   type:string ->
                   extension:string ->
-                  Item
+                  item
 [@@js.builder]
 
-type Intent = private Ojs.t
+type intent = private Ojs.t
 
-val create_Intent :   action:string ->
+val create_intent :   action:string ->
                       clipItems:Item vect ->
                       flags:string ->
                       type:string ->
                       component:string ->
                       extras:int ->
-                      Intent
+                      intent
 [@@js.builder]
 
 val addEventListener :
