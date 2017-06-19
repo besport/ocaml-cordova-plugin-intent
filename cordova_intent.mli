@@ -7,7 +7,7 @@ val create_item : uri:string ->
                   item
 [@@js.builder]
 
-type intent = private Ojs.t
+type intent = {action:string;clipItems:item array;flags:string;my_type:string;component:string;extras:int}
 
 
 val create_intent :   action:string ->
