@@ -10,7 +10,7 @@ val create_item : uri:string ->
 type intent = private Ojs.t
 
 val create_intent :   action:string ->
-                      clipItems:Item vect ->
+                      clipItems:item vect ->
                       flags:string ->
                       my_type:string ->
                       component:string ->
