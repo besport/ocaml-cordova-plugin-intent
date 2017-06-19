@@ -1,5 +1,5 @@
 (*TODO*)
-type item = private Ojs.t
+type item = (uri:string * my_type:string * extension:string)
 
 val create_item : uri:string ->
                   my_type:string ->
