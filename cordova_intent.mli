@@ -11,7 +11,7 @@ type intent = private Ojs.t
 
 
 val create_intent :   action:string ->
-                      clipItems:string list ->
+                      clipItems:item array ->
                       flags:string ->
                       my_type:string ->
                       component:string ->
