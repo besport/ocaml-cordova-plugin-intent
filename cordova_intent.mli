@@ -1,5 +1,5 @@
 (*TODO*)
-type item = {uri:string ; my_type:string ; extension:string}
+type item 
 
 val create_item : uri:string ->
                   my_type:string ->
@@ -7,8 +7,12 @@ val create_item : uri:string ->
                   item
 [@@js.builder]
 
-type intent = {action:string;clipItems:item array;flags:string;my_type:string;component:string;extras:int}
+val uri : item -> string
+val my_type : item -> string
+val extension : item -> string
 
+
+type intent
 
 val create_intent :   action:string ->
                       clipItems:item array ->
@@ -18,6 +22,14 @@ val create_intent :   action:string ->
                       extras:int ->
                       intent
 [@@js.builder]
+
+val action : intent -> string
+val clipItems : intent -> item array
+val flags : intent -> string
+val my_type : intent -> string
+val component : intent -> string
+val extras : intent -> int
+
 
 val addEventListener :
   string                                            ->
