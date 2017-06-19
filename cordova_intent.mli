@@ -25,7 +25,7 @@ val addEventListener :
 [@@js.global "document.addEventListener"]
 
 val setNewIntentHandler :
-  (Intent -> unit)                                    ->
+  (intent -> unit)                                    ->
   unit
 [@@js.global "window.plugins.intent.setNewIntentHandler"]
 
