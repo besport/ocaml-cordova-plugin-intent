@@ -13,7 +13,7 @@ val extension : item -> string
 
 type extras_type
 val create_extras_type :   
-                      (string*string) array ->
+                      array_of_extras:(string*string) array ->
                       extras_type
 [@@js.builder]
 
