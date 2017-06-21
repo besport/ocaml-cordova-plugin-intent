@@ -11,6 +11,11 @@ val uri : item -> string
 val my_type : item -> string
 val extension : item -> string
 
+type extras_type
+val create_extras_type :   
+                      (string*string) array ->
+                      extras_type
+[@@js.builder]
 
 type intent
 
@@ -19,7 +24,7 @@ val create_intent :   action:string ->
                       flags:string ->
                       my_type:string ->
                       component:string ->
-                      extras:int ->
+                      extras:extras_type ->
                       intent
 [@@js.builder]
 
@@ -28,7 +33,7 @@ val clipItems : intent -> item array
 val flags : intent -> string
 val my_type : intent -> string
 val component : intent -> string
-val extras : intent -> int
+val extras : intent -> extras_type
 
 
 val addEventListener :
@@ -43,30 +48,11 @@ val setNewIntentHandler :
 [@@js.global "window.plugins.intent.setNewIntentHandler"]
 
 
-type extra_type
 
-val create_extra_type :   
-                      (string*string) array ->
-                      extra_type
-[@@js.builder]
-
-type first_arg
-
-val create_first_arg :   
-                      action:string ->
-                      ?uri:string ->
-                      ?my_type:string ->
-                      extras:extras_type ->
-                      ?bExpectResult:boolean ->
-                      ?requestCode:int ->
-                      first_arg
-[@@js.builder]
-
-
-val startActivityForResult :
-  my_intent:first_arg ->
-  (intent->unit) ->
+val startActivity :
+  my_intent:intent ->
+  (unit->unit) ->
   (unit->unit) ->
   unit
-[@@js.global "window.plugins.intent.startActivityForResult"]
+[@@js.global "window.plugins.intent.startActivity"]
 
