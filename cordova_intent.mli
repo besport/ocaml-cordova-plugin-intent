@@ -43,4 +43,30 @@ val setNewIntentHandler :
 [@@js.global "window.plugins.intent.setNewIntentHandler"]
 
 
+type extra_type
+
+val create_extra_type :   
+                      (string*string) array ->
+                      extra_type
+[@@js.builder]
+
+type first_arg
+
+val create_first_arg :   
+                      action:string ->
+                      ?uri:string ->
+                      ?my_type:string ->
+                      extras:extras_type ->
+                      ?bExpectResult:boolean ->
+                      ?requestCode:int ->
+                      first_arg
+[@@js.builder]
+
+
+val startActivityForResult :
+  my_intent:first_arg ->
+  (intent->unit) ->
+  (unit->unit) ->
+  unit
+[@@js.global "window.plugins.intent.startActivityForResult"]
 
