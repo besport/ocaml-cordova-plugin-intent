@@ -16,7 +16,7 @@ type intent
 val create_intent :   action:string ->
                       clipItems:item array ->
                       flags:string ->
-                      my_type:string ->
+                      my_type_intent:string ->
                       component:string ->
                       extras:int ->
                       intent
@@ -25,7 +25,7 @@ val create_intent :   action:string ->
 val action : intent -> string
 val clipItems : intent -> item array
 val flags : intent -> string
-val my_type : intent -> string
+val my_type_intent : intent -> string
 val component : intent -> string
 val extras : intent -> int
 
