@@ -2,13 +2,13 @@
 type item 
 
 val create_item : uri:string ->
-                  my_type:string ->
+                  type_item:string ->
                   extension:string ->
                   item
 [@@js.builder]
 
 val uri : item -> string
-val my_type : item -> string
+val type_item : item -> string
 val extension : item -> string
 
 type intent
