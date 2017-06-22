@@ -8,7 +8,7 @@ val create_item : uri:string ->
 [@@js.builder]
 
 val uri : item -> string
-val type_ : item -> string [@@js.get "type"]
+val type_ : item -> string
 val extension : item -> string
 
 type intent
