@@ -2,13 +2,13 @@
 type item 
 
 val create_item : uri:string ->
-                  type_item:string ->
+                  type:string ->
                   extension:string ->
                   item
 [@@js.builder]
 
 val uri : item -> string
-val type_item : item -> string
+val type : item -> string
 val extension : item -> string
 
 type intent
@@ -16,7 +16,7 @@ type intent
 val create_intent :   action:string ->
                       clipItems:item array ->
                       flags:string ->
-                      my_type_intent:string ->
+                      type_intent:string ->
                       component:string ->
                       extras:int ->
                       intent
@@ -25,7 +25,7 @@ val create_intent :   action:string ->
 val action : intent -> string
 val clipItems : intent -> item array
 val flags : intent -> string
-val my_type_intent : intent -> string
+val type_intent : intent -> string
 val component : intent -> string
 val extras : intent -> int
 
