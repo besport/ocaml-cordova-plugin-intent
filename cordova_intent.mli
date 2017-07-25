@@ -3,7 +3,7 @@ type item
 
 val create_item : uri:string ->
                   extension:string ->
-                  text_ ->
+                  text_:string ->
                   item
 [@@js.builder]
 
