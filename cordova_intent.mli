@@ -3,13 +3,13 @@ type item
 
 val create_item : uri:string ->
                   extension:string ->
-                  text ->
+                  text_ ->
                   item
 [@@js.builder]
 
 val uri : item -> string
 val extension : item -> string
-val text : item -> string
+val text_ : item -> string
 
 type intent
 
