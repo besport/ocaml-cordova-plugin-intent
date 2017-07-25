@@ -40,3 +40,8 @@ val setNewIntentHandler :
   (intent -> unit)                                    ->
   unit
 [@@js.global "window.plugins.intent.setNewIntentHandler"]
+
+val getCordovaIntent :
+  (intent -> unit)                                    ->
+  unit
+[@@js.global "window.plugins.intent.getCordovaIntent"]
