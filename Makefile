@@ -2,7 +2,7 @@ include Makefile.conf
 
 ################################################################################
 CC				= ocamlc
-PACKAGES		= -package gen_js_api -package ocaml-js-stdlib
+PACKAGES		= -package gen_js_api
 
 ML_FILE			= $(patsubst %.mli, %.ml, $(MLI_FILE))
 CMI_FILE		= $(patsubst %.mli, %.cmi, $(MLI_FILE))
